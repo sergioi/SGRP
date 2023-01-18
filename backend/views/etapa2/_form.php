@@ -10,30 +10,40 @@ use yii\widgets\ActiveForm;
 
 <div class="etapa2-form">
 
-    <?php $form = ActiveForm::begin(); ?>
+    <div class="jumbotron">
+        <?php $form = ActiveForm::begin(); ?>
+            <div class="row">
+                <div class="col-sm ">
+                    <?php // $form->field($model, 'user_id')->textInput() ?>
 
-    <?php // $form->field($model, 'user_id')->textInput() ?>
+                    <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 1]) ?>
+                    <?= $form->field($model, 'Empresa')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'Empresa')->textarea(['rows' => 1]) ?>
+                    <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 1]) ?>
+                    <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 1]) ?>
+                </div>
 
-    <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 1]) ?>
+                <div class="col-sm ">
+                    
 
-    <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 1]) ?>
+                    <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 1]) ?>
+                    <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 1]) ?>
+                    <?php // $form->field($model, 'created_at')->textInput() ?>
 
-    <?php // $form->field($model, 'created_at')->textInput() ?>
+                    <?php // $form->field($model, 'update_at')->textInput() ?>
+                    <div class="form-group">
+                    <?= Html::submitButton('Guardar', ['class' => 'btn btn-info']) ?>
+                </div>
 
-    <?php // $form->field($model, 'update_at')->textInput() ?>
+                </div>
 
-    <div class="form-group">
-        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
-    </div>
+                
+            </div>
+      <?php ActiveForm::end(); ?>
 
-    <?php ActiveForm::end(); ?>
+    </div>   
 
 </div>
