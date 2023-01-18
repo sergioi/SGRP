@@ -33,7 +33,7 @@ use yii\widgets\ActiveForm;
         
                 <!-- cabecera del diálogo -->
                 <div class="modal-header">
-                    <h4 class="modal-title">Cambios guardados</h4>
+                    <h4 class="modal-title">Cambios guardados.</h4>
                     <button type="button" class="close" data-dismiss="modal">X</button>
                 </div>
             

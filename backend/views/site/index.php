@@ -16,20 +16,20 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
 
 <div class="site-index">
 
-    <div class="jumbotron">
+    <div class="jumbotron ">
                <?php
                if (!Yii::$app->user->isGuest && $es_superAdmi){
-                  echo Html::a('<h1>¡Bienvenida Lic. Julia Natalia Ku Borges!</h1>  
+                  echo Html::a('<h1>¡Bienvenida! Lic. Julia Natalia Ku Borges.</h1>  
                   <p class="lead">
 
                   Ahora puede administrar usuarios, asignar privilegios, y más con
                   nuestras sencillas herramientas.
 
               </p>');
-               }else{echo Html::a('<h1>¡Bienvenido Maestro!</h1>
+               }else{echo Html::a('<h1>¡Bienvenido!</h1>
                 <p class="lead">
 
-                Ahora puede descargar los documento de los alumnos & registrar sus resultados en la Etapa 4
+                Ahora puede registrar los resultados obtenidos por los estudiantes para la Etapa 4 del proceso de residencia profesional.
 
                  </p>');}
                 ?>
@@ -58,13 +58,15 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
                     
                 <h2>Usuarios</h2>
 
-                        <p>
+                <?php if (!Yii::$app->user->isGuest && $es_superAdmi){
+                   echo Html::a('  <p>
 
                             En este lugar puede administrar usuarios.  Puede editar estados y asignar roles.
                             La IU es fácil de usar e intuitiva, simplemente haga clic en el link de abajo para comenzar.
 
-                        </p>
-                       
+                        </p>');
+                } else { echo Html::a('En este lugar puede ver los usuarios registrados y a los alumnos que están realizando el proceso de residencia profesional.'); }
+                ?>
                         <p>
 
                             <?php
@@ -82,7 +84,7 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
                     
                 </div>
                 <div class="col-sm bg"> 
-                                            <h2>Estapas (1, 2, 3,4)</h2>
+                                            <h2>Etapas (1, 2, 3,4).</h2>
 
                             <p>
                                          
@@ -92,23 +94,23 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
                                </li>
                                <?php              if (!Yii::$app->user->isGuest && $es_superAdmi){
                                         echo Html::a('<p>Botones Activados</p>');}
-                                    else {echo Html::a('<p>¡No tienes los permisos para aceder a esta area! (boton inhabilitado)</p>');}?>
+                                    else {echo Html::a('<p>¡No tienes los permisos para acceder a esta área! (Botones inhabilitados).</p>');}?>
                                <br>
                                <li>Etapa 2: datos de la empresa.
                                <?php if (!Yii::$app->user->isGuest && $es_superAdmi) { echo Html::a('Etapa 2', ['etapa2/index'], ['class' => 'btn btn-outline-primary']);}?>
                                <?php              if (!Yii::$app->user->isGuest && $es_superAdmi){
                                         echo Html::a('<p>Botones Activados</p>');}
-                                    else {echo Html::a('<p>¡No tienes los permisos para aceder a esta area! (boton inhabilitado)</p>');}?>
+                                    else {echo Html::a('<p>¡No tienes los permisos para acceder a esta área! (Botones inhabilitados).</p>');}?>
                                         </li>
                                <br>
 
-                               <li> Etapa 3:Documentos cargados.
+                               <li> Etapa 3:Registro de Documentos.
                                 <?php  if (!Yii::$app->user->isGuest && $es_admin) { echo Html::a('anexo I', ['etapa3/index'], ['class' => 'btn btn-outline-primary']);}?> 
                                 <?php if (!Yii::$app->user->isGuest && $es_admin) { echo Html::a('anexo IV', ['etapa3-anexoiv/index'], ['class' => 'btn btn-outline-primary']); } ?> 
                                </li>
 
                                <br>
-                               <li> Etapa 4: Etrega de resultados.
+                               <li> Etapa 4: Entrega de resultados.
                                <?php if (!Yii::$app->user->isGuest && $es_admin) {echo Html::a('Etapa 4', ['etapa4/index'], ['class' => 'btn btn-outline-primary']); } ?>
                                </li>
                                 
@@ -126,12 +128,12 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
 
                 <p>
 
-                    En este apartado pordra activar o desactivar las Etapas a los alumnos.
+                     En este apartado podrá activar o desactivar las Etapas a los alumnos.
 
                 </p>
                 <?php              if (!Yii::$app->user->isGuest && $es_superAdmi){
                                         echo Html::a('<p>Botones Activados</p>');}
-                                    else {echo Html::a('<p>¡No tienes los permisos para aceder a esta area! (boton inhabilitado)</p>');}?>
+                                    else {echo Html::a('<p>¡No tienes los permisos para acceder a esta área! (Botones inhabilitados).</p>');}?>
 
                 <p>
 
@@ -153,12 +155,11 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
 
                                 <p>
 
-                                    Aquí es donde administra los maestros que esten actualmente en la universidad y fungen como asesores
-                                    para los alumnos
+                                Aquí es se administran el registro de los maestros que aceptaron ser asesores.
                                 </p>
                                 <?php              if (!Yii::$app->user->isGuest && $es_superAdmi){
                                         echo Html::a('<p>Botones Activados</p>');}
-                                    else {echo Html::a('<p>¡No tienes los permisos para aceder a esta area! (boton inhabilitado)</p>');}?>
+                                    else {echo Html::a('<p>¡No tienes los permisos para acceder a esta área! (Botones inhabilitados).</p>');}?>
                                 
                                 <?php if (!Yii::$app->user->isGuest && $es_superAdmi) { echo Html::a('Ir', ['maestros/index'], ['class' => 'btn btn-outline-primary']);}?>
                                
@@ -169,19 +170,19 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
                 </div>
 
                 <div class="col-sm bg"> 
-                                            <h2>Area Administrativa</h2>
+                                            <h2>Área Administrativa</h2>
 
                             <p>
-                              <p>Area Administrativa de la pagina aqui no es necesario mover ni cambiar nada.</p>
+                              <p>Área Administrativa de la página aquí no es necesario mover ni cambiar nada.</p>
                               <?php              if (!Yii::$app->user->isGuest && $es_superAdmi){
                                         echo Html::a('<p>Botones Activados</p>');}
-                                    else {echo Html::a('<p>¡No tienes los permisos para aceder a esta area! (botones inhabilitados)</p>');}?>
+                                    else {echo Html::a('<p>¡No tienes los permisos para acceder a esta área! (Botones inhabilitados).</p>');}?>
                                <li> Estados.
                                 <?php if (!Yii::$app->user->isGuest && $es_superAdmi) { echo Html::a('Visitar', ['estado/index'], ['class' => 'btn btn-outline-primary']);}?>
                                </li>
 
                                <br>
-                               <li>roles de usuario.
+                               <li>Roles de usuario.
                                <?php if (!Yii::$app->user->isGuest && $es_superAdmi) { echo Html::a('Visitar', ['rol/index'], ['class' => 'btn btn-outline-primary']);}?>
                                </li>
                                <br>
@@ -204,7 +205,7 @@ $es_superAdmi=PermisosHelpers::requerirMinimoRol('SuperUsuario');
         </div>
 
         <div class="col-sm">
-                    <img class="img-fluid" src="imagenes/Infografía.png" alt="infografia" width="500" height="600">
+                    <img class="img-fluid" src="imagenes/Infografía.jpeg" alt="infografia" width="500" height="600">
         </div>
         
         </div>  

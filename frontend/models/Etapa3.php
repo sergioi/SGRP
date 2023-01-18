@@ -70,22 +70,17 @@ class Etapa3 extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'archivo' => 'Anexo I',
+            'anexo1' => 'Anexo I',
+            'archivo' => '',
             'created_at' => 'Creado:',
             'update_at' => 'Actualizado:',
 
-            'userLink' => Yii::t('app', 'User'),
+            'username' => Yii::t('app', 'User'),
         ];
     }
 
 
-    public function getUserLink()
-    {
-        $url = Url::to(['user/view', 'id'=>$this->UserId]);
-        $opciones = [];
-        return Html::a($this->getUserName(), $url, $opciones);
-    }
-
+   
     public function getUser()
 {
     return $this->hasOne(User::className(), ['id' => 'user_id']);

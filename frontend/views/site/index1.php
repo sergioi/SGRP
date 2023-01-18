@@ -4,7 +4,7 @@
 
 use yii\bootstrap4\Html;
 
-$this->title = 'My Yii Application';
+$this->title = 'Sistema de Gestión para Residencias Profesionales';
 ?>
 <div class="site-index">
 
@@ -24,13 +24,13 @@ $this->title = 'My Yii Application';
     <div class="container-fluid">
     <div class="row">
       <div class="col-sm ">
-      <img class="img-thumbnail" src="imagenes/Infografía.png" alt="infografia" width="500" height="600">
+      <img class="img-thumbnail" src="imagenes/Infografía.jpeg" alt="infografia" width="500" height="600">
       </div>
 
       <div class="col-sm">
         <div class="col-sm ">
         <h4>
-            Enlace a sistema de convenios
+            Enlace al Sistema de Convenios.
 </h4>
         <div></div>
   

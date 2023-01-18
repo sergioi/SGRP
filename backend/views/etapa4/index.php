@@ -18,11 +18,10 @@ $this->title = 'Etapa 4: Entrega de Resultados.';
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Registrar Resultado', ['create'], ['class' => 'btn btn-success']) ?>
+        <?= Html::a('Registrar Resultados', ['create'], ['class' => 'btn btn-success']) ?>
+         <?= Html::a('Convertir a Exel', ['etapa4/exel'], ['class' => 'btn  btn-info']);?>
     </p>
-    <?php
-         echo Html::a('Convertir a Exel', ['etapa4/exel'], ['class' => 'btn btn-lg btn-info']);
-    ?>
+   
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 

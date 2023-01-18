@@ -5,10 +5,10 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa1 $model */
 
-$this->title = 'Update Etapa1: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Etapa1s', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Actualizar Datos Generales de : ' . $model->username.'.';
+$this->params['breadcrumbs'][] = ['label' => 'Etapa 1', 'url' => ['index']];
+
+
 ?>
 <div class="etapa1-update">
 

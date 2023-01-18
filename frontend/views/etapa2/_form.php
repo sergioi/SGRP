@@ -12,38 +12,32 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    COMPLETA LOS COMPOS CON LA INFORMACION SOLICITADA, ASEGURATE DE LLENAR CORRECTAMENTE LOS CAMPOS ANTES DE SELECCIONAR “Guardar”.
-    <br>
-    <br>
+    
+    
     <div class="jumbotron">
     <div class="row">
 
-      <div class="col-sm ">
-      <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 1]) ?>
+          <div class="col-sm ">
+              <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 1]) ?>
+              <?= $form->field($model, 'Empresa')->textarea(['rows' => 1]) ?>
+          </div>
 
-     <?= $form->field($model, 'Empresa')->textarea(['rows' => 1]) ?>
-      </div>
-
-      <div class="col-sm ">
-        
-    <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 1]) ?>
-
-    <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 1]) ?>
-      </div>
-      <div class="col-sm ">
-        <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 1]) ?>
-
-        <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 1]) ?> 
-      </div>
+          <div class="col-sm ">
+              <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 1]) ?>
+              <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 1]) ?>
+          </div>
+          
+          <div class="col-sm ">
+              <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 1]) ?>
+              <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 1]) ?> 
+          </div>
      
     </div>  
+    <?= Html::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
   </div>
 
 
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
 
     <?php ActiveForm::end(); ?>
 

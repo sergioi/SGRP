@@ -10,12 +10,11 @@ use common\models\PermisosHelpers;
 /** @var frontend\models\Etapa2 $model */
 
 
-$this->title = "Datos de la segunda etapa del alumno:".$model->user_id;
-$this->params['breadcrumbs'][] = ['label' => 'Etapa2', 'url' => ['index']];
-$this->params['breadcrumbs'][] = $this->title;
-\yii\web\YiiAsset::register($this);
+$this->title =$model->NombreProyecto;
+
 ?>
 <div class="etapa2-view">
+    <h1>Etapa 2 Datos del Proyecto:</h1>
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -33,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                    'confirm' => Yii::t('app', 'Estas seguro de eliminar tu informacion?'),
+                    'confirm' => Yii::t('app', '¿Estás de acuerdo con eliminar tu información?'),
                     'method' => 'post',
                 ],
             ])
@@ -51,8 +50,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'AsesorExterno:ntext',
             'asesorInterno:ntext',
             'ModalidadDeTitulacion:ntext',
-            'created_at',
-            'update_at',
+            //'created_at',
+            //'update_at',
         ],
     ]) ?>
 

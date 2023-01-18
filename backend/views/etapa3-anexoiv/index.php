@@ -13,9 +13,10 @@ use yii\grid\GridView;
 $this->title = 'Etapa 3 Anexo IV';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+<h1>Etapa 3: Documentos Anexo IV. </h1>
 <div class="etapa3-anexoiv-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
     <?= GridView::widget([
@@ -29,12 +30,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'anexo1',
             'created_at',
             'update_at',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Etapa3Anexoiv $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
+            
         ],
     ]); ?>
 

@@ -75,7 +75,7 @@ class Etapa3AnexoivController extends Controller
      */
     public function actionIndex()
     {
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
             return $this->render('view', [
             'model' => $this->findModel($ya_existe),
             ]);
@@ -97,7 +97,7 @@ class Etapa3AnexoivController extends Controller
      */
     public function actionView()
     {
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
            
             return $this->render('view', [
             'model' => $this->findModel($ya_existe),
@@ -121,7 +121,7 @@ class Etapa3AnexoivController extends Controller
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
       
          
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -151,7 +151,7 @@ class Etapa3AnexoivController extends Controller
     {
         $model = new Etapa3Anexoiv();
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -180,7 +180,7 @@ class Etapa3AnexoivController extends Controller
     {
         $model = new Etapa3Anexoiv();
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -210,7 +210,7 @@ class Etapa3AnexoivController extends Controller
     {
         $model = new Etapa3Anexoiv();
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -240,7 +240,7 @@ class Etapa3AnexoivController extends Controller
     {
         $model = new Etapa3Anexoiv();
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -270,7 +270,7 @@ class Etapa3AnexoivController extends Controller
     {
         $model = new Etapa3Anexoiv();
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_3_anexoiv')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_3_anexoiv')) {
   
             return $this->render('view', [
   
@@ -306,27 +306,7 @@ class Etapa3AnexoivController extends Controller
      */
     public function actionUpdate()
     {
-       // PermisosHelpers::requerirUpgradeA('Etapa_1');
-
-       if($model =  Etapa3Anexoiv::find()->where(['user_id' => 
-       Yii::$app->user->identity->id])->one()) {
-       
-       if ($this->subirArchivo($model)) {
-           
-           return $this->redirect(['view']);
-       
-       } else {
-           
-       return $this->render('update', [
-               'model' => $model, 
-           ]);
-       }
-
-       } else {
-               
-           throw new NotFoundHttpException('No Existe el Perfil.');
-               
-       }
+        return $this->redirect(['create']);
     }
 
     /**
@@ -362,7 +342,7 @@ class Etapa3AnexoivController extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('La página solicitada no existe.');
     }
 
     

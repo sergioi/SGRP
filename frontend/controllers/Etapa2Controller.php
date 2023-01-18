@@ -72,7 +72,7 @@ class Etapa2Controller extends Controller
      */
     public function actionIndex()
     {
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_2')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_2')) {
             return $this->render('view', [
             'model' => $this->findModel($ya_existe),
             ]);
@@ -90,7 +90,7 @@ class Etapa2Controller extends Controller
     public function actionView()
     {
         
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_2')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_2')) {
            
             return $this->render('view', [
             'model' => $this->findModel($ya_existe),
@@ -113,7 +113,7 @@ class Etapa2Controller extends Controller
           
         $model->user_id = \Yii::$app->user->identity->id;   //asigna la id de usuario al user_id de la tabla ETapa1  para indetificar su creacion
       
-        if ($ya_existe = RegistrosHelpers::userTiene('Etapa_2')) {
+        if ($ya_existe = RegistrosHelpers::userTiene('etapa_2')) {
   
             return $this->render('view', [
   
@@ -161,7 +161,7 @@ class Etapa2Controller extends Controller
 
         } else {
                 
-            throw new NotFoundHttpException('No Existe el Perfil.');
+            throw new NotFoundHttpException('No Existe el Registro.');
                 
         }
     }
@@ -195,6 +195,6 @@ class Etapa2Controller extends Controller
             return $model;
         }
 
-        throw new NotFoundHttpException('The requested page does not exist.');
+        throw new NotFoundHttpException('La página solicitada no existe.');
     }
 }

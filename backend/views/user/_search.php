@@ -17,7 +17,7 @@ use common\models\User;
         'method' => 'get',
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
+    <?php //$form->field($model, 'id') ?>
 
     <?= $form->field($model, 'username') ?>
 

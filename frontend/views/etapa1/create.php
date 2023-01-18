@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa1 $model */
 
-$this->title = 'Etapa 1 (Datos Generales)';
+$this->title = 'Etapa 1: Datos Generales del Alumno.';
 
 ?>
 <div class="etapa1-create">

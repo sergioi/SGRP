@@ -15,13 +15,16 @@ $this->title = 'Carreras';
 
 <div class="container">
   <h1>Anexo I.<?php echo Html::a('ANEXO IV', ['etapa3-anexoiv/index'], ['class' =>'btn btn-outline-primary']);?></h1>
-  <h2>Seleciona tu Carrera</h2>
-  <br><li><?php echo Html::a('Ingeniería industrial', ['etapa3/create'], ['class' =>'btn btn-outline-primary']);?></li>
-  <br><li><?php echo Html::a('Ingeniería en sistemas computacionales', ['etapa3/create2'], ['class' =>'btn btn-outline-secondary']);?></li>
-  <br> <li><?php echo Html::a('Ingeniería en gestión empresarial', ['etapa3/create3'], ['class' =>'btn btn-outline-success']);?></li>
-  <br><li><?php echo Html::a('Ingeniería en administración', ['etapa3/create4'], ['class' =>'btn btn-outline-info']);?></li>
-  <br><li> <?php echo Html::a('Ingeniería civil', ['etapa3/create5'], ['class' =>'btn btn-outline-warning']);?></li>
-  <br><li><?php echo Html::a('Ingeniería ambiental', ['etapa3/create6'], ['class' =>'btn btn-outline-danger']);?></li>
+  <h2>Selecciona tu Carrera</h2><div class="alert alert-danger">
+    <strong>NOTA: </strong>Selecciona tu carrera de manera correcta subirla en otra
+     implicaría que el docente no obtenga tu documento y tú proceso de residencia profesional no se complete.
+ </div>
+  <br><li><?php echo Html::a('Ingeniería Industrial', ['etapa3/create'], ['class' =>'btn btn-outline-primary']);?></li>
+  <br><li><?php echo Html::a('Ingeniería en Sistemas Computacionales', ['etapa3/create2'], ['class' =>'btn btn-outline-secondary']);?></li>
+  <br> <li><?php echo Html::a('Ingeniería en Gestión Empresarial', ['etapa3/create3'], ['class' =>'btn btn-outline-success']);?></li>
+  <br><li><?php echo Html::a('Ingeniería en Administración', ['etapa3/create4'], ['class' =>'btn btn-outline-info']);?></li>
+  <br><li> <?php echo Html::a('Ingeniería Civil', ['etapa3/create5'], ['class' =>'btn btn-outline-warning']);?></li>
+  <br><li><?php echo Html::a('Ingeniería Ambiental', ['etapa3/create6'], ['class' =>'btn btn-outline-danger']);?></li>
  
 </div>
 </html>

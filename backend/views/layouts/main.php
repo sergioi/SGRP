@@ -35,7 +35,7 @@ AppAsset::register($this);
         ],
     ]);
     $menuItems = [
-        ['label' => 'Menu Principal', 'url' => ['/site/index']],
+        ['label' => 'Menú Principal', 'url' => ['/site/index']],
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
@@ -63,13 +63,13 @@ AppAsset::register($this);
             'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
         ]) ?>
         <?= Alert::widget() ?>
-        <?= $content ?>
+        <?='<br><br><img src="imagenes/cabecera.png" width="1200" alt="TECNOLÓGICO NACIONAL DE MÉXICO" class="img-fluid" /><br>',  $content ?>
     </div>
 </main>
 
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
-        <p class="float-left">&copy; <?= Html::encode('Sistema de Gestion para Residencias Profecionales') ?> <?= date('Y') ?></p>
+        <p class="float-left">&copy; <?= Html::encode('Sistema de Gestión para Residencias Profesionales') ?> <?= date('Y') ?></p>
         <p class="float-right"><?= Html::encode("Desarrollado por los Ings.  Sergio Coatl & Dimas Nahuat" ) ?></p>
     </div>
 </footer>

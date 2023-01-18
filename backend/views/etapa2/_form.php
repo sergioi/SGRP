@@ -12,26 +12,26 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'user_id')->textInput() ?>
+    <?php // $form->field($model, 'user_id')->textInput() ?>
 
-    <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'NombreProyecto')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'Empresa')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'Empresa')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'UbicacionEmpresa')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'AsesorExterno')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'asesorInterno')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 6]) ?>
+    <?= $form->field($model, 'ModalidadDeTitulacion')->textarea(['rows' => 1]) ?>
 
-    <?= $form->field($model, 'created_at')->textInput() ?>
+    <?php // $form->field($model, 'created_at')->textInput() ?>
 
-    <?= $form->field($model, 'update_at')->textInput() ?>
+    <?php // $form->field($model, 'update_at')->textInput() ?>
 
     <div class="form-group">
-        <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>
+        <?= Html::submitButton('Guardar', ['class' => 'btn btn-success']) ?>
     </div>
 
     <?php ActiveForm::end(); ?>

@@ -26,7 +26,7 @@ AppAsset::register($this);
 <body>
     
  
-    <h3 class="text-center">Desarrolladores</h3>
+    <h3 class="text-center">DESARROLADORES.</h3>
     <br>
  <!-- Nav tabs -->
   <ul class="nav nav-tabs" role="tablist">
@@ -49,15 +49,17 @@ AppAsset::register($this);
                         </div>
 
                         <div class="col-sm jumbotron" > 
-                            <h2>Sergio Coatl Pérez</h2>
-                            <h5>Edad: 26 años</h5>
-                            <h5>Rol en el proyecto: Lider</h5>
+                            <h2>Sergio Coatl Pérez.</h2>
+                            <h5>Edad: 26 años.</h5>
+                            <h5>Rol en el proyecto: Líder de Proyecto.</h5>
                             <h5>Correo Electronico:</h5>
-                            <h5>coatlperez.sergio@itsva.edu.mx</h5>
+                            <a href="mailto:sergio.coatlperez@itsva.edu.mx">
+                                <h5>sergio.coatlperez@itsva.edu.mx</h5>
+                            </a>
                             <h5>Contribuciones:</h5>
                             <h5>Desarrollo del backend, colaborador en el frontend, 
-                                aportes al Manual, diseño e implementación de la base 
-                                de datos, documentación del proyecto, diseño de vistas. </h5>
+                                aportes al manual, diseño e implementación de la base 
+                                de datos, documentación del proyecto y diseño de vistas. </h5>
                         </div>
                     </div>  
 
@@ -73,13 +75,15 @@ AppAsset::register($this);
                         </div>
 
                         <div class="col-sm jumbotron" > 
-                            <h2>Dimas Nahuat Herrera</h2>
-                            <h5>Edad: 25 años</h5>
-                            <h5>Rol en el proyecto: Colaborador</h5>
+                            <h2>Dimas Nahuat Herrera.</h2>
+                            <h5>Edad: 25 años.</h5>
+                            <h5>Rol en el proyecto: Colaborador.</h5>
                             <h5>Correo Electronico:</h5>
-                            <h5>nahuatherrera.dimas@itsva.edu.mx</h5>
+                            <a href="mailto:dimas.nauatherrera@itsva.edu.mx">
+                                <h5>nahuatherrera.dimas@itsva.edu.mx</h5>
+                            </a>
                             <h5>Contribuciones:</h5>
-                            <h5>Desarrollo en frontend, Manual, colaboración en el diseño de la base de datos, documentación general, y diseño de vistas. </h5>
+                            <h5>Desarrollo en frontend, manual, colaboración en el diseño de la base de datos, documentación general, y disarrollo de vistas. </h5>
                         </div>
                     </div>  
 

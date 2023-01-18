@@ -11,12 +11,12 @@ use common\models\PermisosHelpers;
  * @var frontend\models\Etapa1 $model 
  */
 
-$this->title = "Datos de la primera etapa del alumno:".$model->Nombre;
+$this->title = "Etapa 1 Alumno: ". $model->Nombre;
 $this->params['breadcrumbs'][] = ['label' => 'Etapa1', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 
 ?>
-<div class="etapa1-view">
+<div class="jumbotron">
 
     <h1><?= Html::encode($this->title) ?></h1>
 
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
                     'class' => 'btn btn-danger',
                     'data' => [
-                        'confirm' => Yii::t('app', 'Estas seguro de eliminar tu informacion?'),
+                        'confirm' => Yii::t('app', '¿Estás de acuerdo con eliminar tu información?'),
                         'method' => 'post',
                     ],
              ])
@@ -57,8 +57,8 @@ $this->params['breadcrumbs'][] = $this->title;
             'desicionNombre2',
             'desicionNombre3',
             'email:email',
-            'created_at',
-            'updated_at'
+            //'created_at',
+            //'updated_at'
         ],
     ]) ?>
 

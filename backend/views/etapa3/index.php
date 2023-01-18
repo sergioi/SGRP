@@ -12,24 +12,12 @@ use \yii\bootstrap4\Collapse;
 /** @var backend\models\search\Etapa3Search $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Etapa3';
+$this->title = 'Etapa 3 Anexo I';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="etapa3-index">
-<h1>Etapa 3 Documentos Anexo I </h1>
-<?php   echo Collapse::widget([
-                        
-                        'items' => [
-                        // equivalent to the above
-                        [
-                        'label' => 'Buscar',
-                        'content' => $this->render('_search', ['model' => $searchModel]) ,
-                        // open its content by default
-                        //'contentOptions' => ['class' => 'in']
-                         ],
-                                       
-                         ] 
-                         ]); ?> 
+<h1>Etapa 3: Documentos Anexo I. </h1>
+
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -44,12 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'anexo1',
             'created_at',
             'update_at',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, Etapa3 $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
+           
         ],
     ]); ?>
 

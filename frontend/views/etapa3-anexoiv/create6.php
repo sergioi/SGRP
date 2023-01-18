@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa3Anexoiv $model */
 
-$this->title = 'Ingeniería en Ambiental';
+$this->title = 'Ingeniería en Ambiental.';
 
 
 ?>

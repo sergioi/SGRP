@@ -47,22 +47,22 @@ AppAsset::register($this);
     ];
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Registro', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'iniciar Sesión', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Iniciar Sesión', 'url' => ['/site/login']];
     } else {
         
        if (PermisosHelpers::requerirMinimoRol('Admin'))  {
         $menuItems[] = ['label' => 'Descargas', 'url' => ['/site/carreras']];
        }
-        $menuItems[] = ['label' => 'Etapa1', 'url' => ['/etapa1/view']];
-        $menuItems[] = ['label' => 'Etapa2', 'url' => ['/etapa2/view']];
-        $menuItems[] = ['label' => 'Etapa3', 'url' => ['/etapa3/index']];
-        $menuItems[] = ['label' => 'Etapa4', 'url' => ['/etapa4/index']];
+        $menuItems[] = ['label' => 'Etapa 1', 'url' => ['/etapa1/view']];
+        $menuItems[] = ['label' => 'Etapa 2', 'url' => ['/etapa2/view']];
+        $menuItems[] = ['label' => 'Etapa 3', 'url' => ['/etapa3/index']];
+        $menuItems[] = ['label' => 'Etapa 4', 'url' => ['/etapa4/index']];
     
         $menuItems[] = '<li>'
 
             . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
             . Html::submitButton(
-                'Logout (' . Yii::$app->user->identity->username . ')',
+                'Cerrar Sesión (' . Yii::$app->user->identity->username . ')',
                 ['class' => 'btn btn-link logout']
             )
             . Html::endForm()
@@ -94,7 +94,7 @@ AppAsset::register($this);
 
 <footer class="footer mt-auto py-3 text-muted">
     <div class="container">
-        <p class="float-left">&copy; <?= Html::encode('Sistema de Gestion para Residencias Profecionales') ?> <?= date('Y') ?></p>
+        <p class="float-left">&copy; <?= Html::encode('Sistema de Gestión para Residencias Profesionales') ?> <?= date('Y') ?></p>
         <p class="float-right"><?= Html::encode("Desarrollado por los Ings.  Sergio Coatl & Dimas Nahuat" ) ?></p>
     </div>
 </footer>

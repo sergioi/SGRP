@@ -11,10 +11,10 @@ use \yii\bootstrap4\Collapse;
 /** @var backend\models\search\Etapa2Search $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Etapa2s';
+$this->title = 'Etapa 2';
 
 ?>
-<h1>Etapa 2 (Datos del Proyecto Propuesto por el Alumno). </h1>
+<h1>Etapa 2: (Datos del Proyecto Propuesto por el Alumno). </h1>
 <div class="etapa2-index">
 <?php
          echo Html::a('Convertir a Exel', ['etapa2/exel'], ['class' => 'btn btn-lg btn-info']);

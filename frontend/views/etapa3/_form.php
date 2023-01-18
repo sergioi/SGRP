@@ -11,7 +11,7 @@ use yii\widgets\ActiveForm;
 <div class="jumbotron">
 
     <?php $form = ActiveForm::begin(); ?>
-    <p>SUBE EL ACRHIVO CORRESPONDIENTE, AL FINALIZAR HAZ CLIC EN "GUARDAR"</p>
+    <p>SUBE EL ARCHIVO CORRESPONDIENTE, AL FINALIZAR HAZ CLIC EN "GUARDAR"</p>
      <br>
      <h2>Anexo I</h2>
  

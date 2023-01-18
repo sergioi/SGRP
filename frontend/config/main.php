@@ -9,7 +9,7 @@ $params = array_merge(
 return [
     'id' => 'app-frontend',
     'language' =>'es',
-    'name'=>'Sistema de Gestion para Residencias Profecionales',
+    'name'=>'Sistema de Gestión para Residencias Profesionales',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',

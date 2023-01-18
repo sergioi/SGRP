@@ -45,10 +45,10 @@ class Etapa4 extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'user_id' => 'Matricula del alumno',
+            'user_id' => 'Matrícula del alumno',
             'asesor_interno' => 'Asesor Interno',
             'viable_titu' => 'Viable para titulacion',
-            'aprovado_resi' => 'Aprovado para Residencia',
+            'aprovado_resi' => 'Aprobado para Residencia',
             'observaciones' => 'Observaciones',
         ];
     }

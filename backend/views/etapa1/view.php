@@ -10,26 +10,26 @@ $this->title = $model->Nombre;
 
 $mostrar_esta_nav = PermisosHelpers::requerirMinimoRol('SuperUsuario');
 
-$this->params['breadcrumbs'][] = ['label' => 'Perfiles', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Etapa 1', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="perfil-view">
 
-    <h1>Perfil:  <?= Html::encode($this->title) ?></h1>
+    <h1>Etapa 1:  <?= Html::encode($this->title) ?></h1>
 
 
     <p>
 
     <?php if (!Yii::$app->user->isGuest &$mostrar_esta_nav) {
-        echo Html::a('Update', ['update', 'id' => $model->id],
+        echo Html::a('Actualizar', ['update', 'id' => $model->id],
         ['class' => 'btn btn-primary']);}?>
 
 
         <?php if (!Yii::$app->user->isGuest && $mostrar_esta_nav) {
-            echo Html::a('Delete', ['delete', 'id' => $model->id], [
+            echo Html::a('Eliminar', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                    'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                    'confirm' => Yii::t('app', '¿Estás seguro de que quieres eliminar este Registro?'),
                     'method' => 'post',
                 ],
             ]);}?>
@@ -44,13 +44,13 @@ $this->params['breadcrumbs'][] = $this->title;
             //'user_id',
             'Nombre',
             'matricula',
-            'sexo',
+            'generoNombre',
             'telefono',
-            'ingenieria',
-            'padeceDisc',
+            'ingenieriasNombre',
+            'desicionNombre',
             'cual:ntext',
-            'pereteneceAEtn:ntext',
-            'hablaLaLengua',
+            'desicionNombre2',
+            'desicionNombre3',
             'email:email',
             'created_at',
             'updated_at',

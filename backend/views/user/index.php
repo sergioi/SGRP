@@ -16,10 +16,10 @@ $this->title = 'Usuarios';
 ?>
 
 
-<div class="jumbotron">
+<div class="jumbotron col-sm">
 
     <h1><?= Html::encode($this->title) ?></h1>
-    <p>Para Elevar Privelegios de un Usuario haz clic en el Icono Editar "Lapiz"</p>
+    <p>Para Elevar Privilegios de un Usuario haz clic en el Icono Editar "Lápiz".</p>
 
 
     <?php   echo Collapse::widget([
@@ -50,14 +50,17 @@ $this->title = 'Usuarios';
   
              //['attribute'=>'userIdLink', 'format'=>'raw'],
              ['attribute'=>'userLink', 'format'=>'raw'],
-             ['attribute'=>'perfilLink', 'format'=>'raw'],
-            
+             
+             ['attribute'=>'etapa1Link', 'format'=>'raw'],
+             ['attribute'=>'etapa2Link', 'format'=>'raw'],
+             ['attribute'=>'etapa3Link', 'format'=>'raw'],
+             ['attribute'=>'AnexoIV', 'format'=>'raw'],
              'email:email',
              'rolNombre',
              //'tipoUsuarioNombre',
              'estadoNombre',
-             'created_at',
-             'updated_at',
+             //'created_at',
+             //'updated_at',
            
             ['class' => 'yii\grid\ActionColumn'],
            

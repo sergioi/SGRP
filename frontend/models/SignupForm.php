@@ -40,7 +40,7 @@ class SignupForm extends Model
     public function attributeLabels()
     {
         return [
-            'username' => 'Ingresa tu matricula',
+            'username' => 'Ingresa tu matrícula',
             'email' => 'Correo institucional',
             'password' => 'Ingresa una contraseña',
            

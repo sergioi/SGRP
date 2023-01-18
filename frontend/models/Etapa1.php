@@ -85,13 +85,13 @@ class Etapa1 extends \yii\db\ActiveRecord
             'id' => 'ID',
             'user_id' => 'User ID',
             'Nombre' => 'Nombre Completo',
-            'matricula' => 'Matricula',
+            'matricula' => 'Matrícula',
             'sexo' => 'Sexo',
-            'telefono' => 'Telefono',
-            'ingenieria' => '¿Ingenieria a la que Pertenece?',
+            'telefono' => 'Teléfono',
+            'ingenieria' => '¿Ingeniería a la que Pertenece?',
             'padeceDisc' => '¿Padeces Alguna Discapacidad?',
-            'cual' => '¿Cual?',
-            'pereteneceAEtn' => '¿Perteneces a alguna Etnia',
+            'cual' => '¿Cuál?',
+            'pereteneceAEtn' => '¿Perteneces a alguna Etnia?',
             'hablaLaLengua' => '¿Hablas la Lengua de la Etnia?',
             'email' => 'Email',
             'created_at' => 'Created At',
@@ -99,11 +99,11 @@ class Etapa1 extends \yii\db\ActiveRecord
             //getGeneneroNombre =>
             'generoNombre' => Yii::t('app', 'Sexo'),
             
-            'ingenieriasNombre' => Yii::t('app', 'Ingenieria del alumno'),
+            'ingenieriasNombre' => Yii::t('app', 'Ingeniería del alumno'),
             'desicionNombre' => Yii::t('app', '¿Padece discapacidad?'),
-            'desicionNombre2' => Yii::t('app', '¿Pertece a alguna Etnia?'),
+            'desicionNombre2' => Yii::t('app', '¿Pertenece a alguna Etnia?'),
             'desicionNombre3' => Yii::t('app', '¿Habla la lengua de la etnia?'),
-            'userLink' => Yii::t('app', 'User'),
+            'userLink' => Yii::t('app', 'Usuario'),
             
             
         ];

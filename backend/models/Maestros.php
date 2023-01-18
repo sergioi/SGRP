@@ -40,7 +40,7 @@ class Maestros extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nombre_maestro' => 'Nombre Maestro',
+            'nombre_maestro' => 'Nombre del Docente',
         ];
     }
     public function getEtapa4()

@@ -8,7 +8,7 @@ use yii\widgets\ActiveForm;
 /** @var yii\widgets\ActiveForm $form */
 ?>
 
-<div class="maestros-form">
+<div class="jumbotron">
 
     <?php $form = ActiveForm::begin(); ?>
 

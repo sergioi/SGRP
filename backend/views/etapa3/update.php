@@ -5,10 +5,9 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa3 $model */
 
-$this->title = 'Update Etapa3: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Etapa3s', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->title = 'Actualizar Etapa3: ' . $model->id;
+$this->params['breadcrumbs'][] = ['label' => 'Etapa3', 'url' => ['index']];
+
 ?>
 <div class="etapa3-update">
 

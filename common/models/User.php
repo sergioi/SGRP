@@ -13,6 +13,10 @@ use yii\db\Expression;
 use backend\models\Rol;
 use backend\models\Estado;
 use frontend\models\Perfil;
+use frontend\models\Etapa1;
+use frontend\models\Etapa2;
+use frontend\models\Etapa3;
+use frontend\models\Etapa3Anexoiv;
 use backend\models\TipoUsuario;
 
 use common\models\User;
@@ -110,11 +114,19 @@ class User extends ActiveRecord implements IdentityInterface
         'estadoNombre' => Yii::t('app', 'Estado'),
         'perfilId' => Yii::t('app', 'Perfil'),
         'perfilLink' => Yii::t('app', 'Perfil'),
-        'userLink' => Yii::t('app', 'User'),
-        'username' => Yii::t('app', 'User'),
+        'userLink' => Yii::t('app', 'Usuario'),
+        'username' => Yii::t('app', 'Usuario'),
         'tipoUsuarioNombre' => Yii::t('app', 'Tipo Usuario'),
         'tipoUsuarioId' => Yii::t('app', 'Tipo Usuario'),
         'userIdLink' => Yii::t('app', 'ID'),
+
+        'rol_id'=>'Rol',
+        'estado_id'=>'Estado',
+
+        'etapa1Link' => Yii::t('app', 'Etapa 1'),
+        'etapa2Link' => Yii::t('app', 'Etapa 2'),
+        'etapa3Link' => Yii::t('app', 'Anexo I'),
+        'AnexoIV' => Yii::t('app', 'Anexo IV'),
         
         ];
         }
@@ -286,10 +298,7 @@ class User extends ActiveRecord implements IdentityInterface
         {
             return $this->perfil ? $this->perfil->id : 'ninguno';
         }
-        /**
-         * @getPerfilLink
-         *
-         */
+       
 
         public function getPerfilLink()
         {
@@ -297,6 +306,68 @@ class User extends ActiveRecord implements IdentityInterface
             $opciones = [];
             return Html::a($this->perfil ? 'perfil' : 'ninguno', $url, $opciones);
         }
+//----------------------------------------------------------------
+
+        public function getEtapa1Link()
+        {
+            $url = Url::to(['etapa1/view', 'id'=>$this->etapa1Id]);
+            $opciones = [];
+            return Html::a($this->etapa1 ? 'completado' : 'no completado', $url, $opciones);
+        }
+        public function getEtapa1()
+        {
+            return $this->hasOne(Etapa1::className(), ['user_id' => 'id']);
+        }
+        public function getEtapa1Id()
+        {
+            return $this->etapa1 ? $this->etapa1->id : 'ninguno';
+        }
+        
+//-----------------------------------------------------
+public function getEtapa2Link()
+{
+    $url = Url::to(['etapa2/view', 'id'=>$this->etapa2Id]);
+    $opciones = [];
+    return Html::a($this->etapa2 ? 'completado' : 'no completado', $url, $opciones);
+}
+public function getEtapa2()
+{
+    return $this->hasOne(Etapa2::className(), ['user_id' => 'id']);
+}
+public function getEtapa2Id()
+{
+    return $this->etapa2 ? $this->etapa2->id : 'ninguno';
+}
+//------------------------------------------------------
+public function getEtapa3Link()
+{
+    $url = Url::to(['etapa3/view', 'id'=>$this->etapa3Id]);
+    $opciones = [];
+    return Html::a($this->etapa3 ? 'completado' : 'no completado', $url, $opciones);
+}
+public function getEtapa3()
+{
+    return $this->hasOne(Etapa3::className(), ['user_id' => 'id']);
+}
+public function getEtapa3Id()
+{
+    return $this->etapa3 ? $this->etapa3->id : 'ninguno';
+}
+//----------------------------------------------------------------
+public function getAnexoIV()
+{
+    $url = Url::to(['etapa3-anexoiv/view', 'id'=>$this->etapa4Id]);
+    $opciones = [];
+    return Html::a($this->etapa4 ? 'completado' : 'no completado', $url, $opciones);
+}
+public function getEtapa4()
+{
+    return $this->hasOne(Etapa3Anexoiv::className(), ['user_id' => 'id']);
+}
+public function getEtapa4Id()
+{
+    return $this->etapa4 ? $this->etapa4->id : 'ninguno';
+}
 //----------------------------------------------------------------
     // metodos para rol
 

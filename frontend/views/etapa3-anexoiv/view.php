@@ -8,7 +8,7 @@ use common\models\PermisosHelpers;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa3Anexoiv $model */
 
-$this->title = "Tercera Etapa.Alumno:".$model->username;
+$this->title = "Etapa 3: Anexo IV del Alumno ".$model->username.'.';
 
 
 \yii\web\YiiAsset::register($this);
@@ -17,7 +17,9 @@ $this->title = "Tercera Etapa.Alumno:".$model->username;
 
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <h5>NOTA: Si te equivocaste de archivo selecciona “Eliminar” para reiniciar el proceso de carga.</h5>
+    <div class="alert alert-danger">
+    <strong>NOTA: </strong>Si te equivocaste con el archivo selecciona “Eliminar” para reiniciar el proceso de carga.
+ </div>
 
     <p>
    
@@ -25,7 +27,7 @@ $this->title = "Tercera Etapa.Alumno:".$model->username;
             <?= Html::a('Eliminar', ['delete', 'id' => $model->id], [
                 'class' => 'btn btn-danger',
                 'data' => [
-                    'confirm' => Yii::t('app', 'Estas seguro de eliminar tu informacion?'),
+                    'confirm' => Yii::t('app', '¿Estás de acuerdo con eliminar tu información?'),
                     'method' => 'post',
                 ],
             ])

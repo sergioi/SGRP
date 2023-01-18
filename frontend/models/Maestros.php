@@ -38,7 +38,7 @@ class Maestros extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'nombre_maestro' => 'Nombre Docente',
+            'nombre_maestro' => 'Nombre del Docente',
         ];
     }
 }

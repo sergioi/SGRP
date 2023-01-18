@@ -72,16 +72,17 @@ class Etapa2 extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'NombreProyecto' => 'Nombre del Proyecto',
-            'Empresa' => 'Nombre de la Empresa',
-            'UbicacionEmpresa' => 'Direcion y ubicacion  de la Empresa',
-            'AsesorExterno' => 'Asesor Externo',
-            'asesorInterno' => 'Asesor Interno',
-            'ModalidadDeTitulacion' => 'Modalidad De Titulacion',
+            'NombreProyecto' => 'Nombre del Proyecto.',
+            'Empresa' => 'Nombre de la Empresa.',
+            'UbicacionEmpresa' => 'Direción y ubicación  de la Empresa.',
+            'AsesorExterno' => 'Asesor Externo.',
+            'asesorInterno' => 'Asesor Interno.',
+            'ModalidadDeTitulacion' => 'Modalidad De Titulación.',
             'created_at' => 'Creado',
             'update_at' => 'Actualizado',
 
             'userLink' => Yii::t('app', 'User'),
+            'username' => Yii::t('app', 'User'),
         ];
     }
 

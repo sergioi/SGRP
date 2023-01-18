@@ -41,10 +41,10 @@ class Activacion extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'activacion1' => 'Activar Etapa 1 (Datos generales)',
-            'activacion2' => 'Activar Etapa 2 (Datos de la empresa)',
-            'activacion3' => 'Activar Etapa 3 (carga de los anexos (I y IV))',
-            'activacion33' => 'Activar Etapa 4 (mostrar lista de resultados)',
+            'activacion1' => 'Activar Etapa 1 (Datos generales).',
+            'activacion2' => 'Activar Etapa 2 (Datos de la empresa).',
+            'activacion3' => 'Activar Etapa 3 (Carga de los anexos (I y IV).',
+            'activacion33' => 'Activar Etapa 4 (Mostrar lista de resultados).',
         ];
     }
 }

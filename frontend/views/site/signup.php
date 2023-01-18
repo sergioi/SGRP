@@ -7,7 +7,7 @@
 use yii\bootstrap4\Html;
 use yii\bootstrap4\ActiveForm;
 
-$this->title = 'Registro';
+$this->title = 'Registro.';
 
 ?>
 <div class="site-signup">
@@ -43,8 +43,11 @@ $this->title = 'Registro';
             <div class="col-lg-8">
                  <div class="card-body py-5 px-md-5">
                     <h1><?= Html::encode($this->title) ?></h1>
-                        <p>Por favor llene los siguientes campos para registrarse:</p>
-                        <p>Registro valido únicamente con su Matricula</p>
+                        <p>Por favor llene los siguientes campos para registrarte.</p>
+                        <p>Registro válido únicamente con su Matricula</p>
+                        <div class="alert alert-danger">
+                            <strong>¡Advertencia!</strong> Registro válido únicamente con su Matricula
+                        </div>
                     
                  
                     <div class="row">

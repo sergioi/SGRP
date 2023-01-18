@@ -3,8 +3,11 @@
 /** @var yii\web\View $this */
 
 use yii\bootstrap4\Html;
+use common\models\PermisosHelpers;
 
-$this->title = 'My Yii Application';
+$this->title = 'Sistema de Gestión para Residencias Profesionales';
+$es_admin = PermisosHelpers::requerirMinimoRol('Admin');
+
 ?>
 <div class="site-index">
 
@@ -14,16 +17,38 @@ $this->title = 'My Yii Application';
 <div class="site-index">
 
 <div class="jumbotron">
+<?php
+               if (!Yii::$app->user->isGuest && $es_admin){
+                  echo Html::a('<h1>¡Bienvenido! Docente</h1>  
+                  <p class="lead">
 
-    <h1>¡Bienvenido a Alumno!</h1>
+                  Ahora puede desargar los documentos (Anexo I y Anexo IV) subidos por los alumnos.
 
-    <p class="lead">
+              </p>');
+               }else{echo Html::a(' <h1>¡Bienvenido Alumno!</h1>
 
-        Ahora puedes empesar tu proceso de 
-        registro para residencia profecinal
-    </p>
-
+                <p class="lead">
+            
+                Ahora puedes comenzar con el proceso de registro para residencia profesional.
+             
+                </p>
+            
+                <p>');}
+                ?>
     
+                                             <p>
+
+                                <?php
+
+                                if (!Yii::$app->user->isGuest && $es_admin) {
+
+                                    echo Html::a('Descargar', ['site/carreras'], ['class' => 'btn btn-lg btn-success']);
+
+                                }
+
+                                ?>
+
+                                </p>
 
 </div>
 
@@ -31,12 +56,13 @@ $this->title = 'My Yii Application';
     <div class="row">
       <div class="col-sm ">
             <div class="col-sm">
-            <h2>Etapa 1 <br>(Datos generales)</h2>
+            <h2>Etapa 1: (Datos Generales).</h2>
 
                     <p>
 
-                        Este este apartado proporcionaras tu informacion personal.
-                        En caso de ya tener una podras visulizarla
+       
+                    En la etapa 1 se recopilan datos generales haz clic en botón para llenar el 
+                    formulario correspondiente o si ya lo llenaste poder visualizar tus datos.
 
                     </p>
 
@@ -55,12 +81,12 @@ $this->title = 'My Yii Application';
                     </p>
             </div>
             <div class="col-sm ">
-            <h2>Etapa 2 (Registro de anteproyecto)</h2>
+            <h2>Etapa 2:<br> (Registro de Anteproyecto).</h2>
 
                     <p>
 
-                        Aquí es donde administra Roles.  Puede decidir quién es admin y quién no.  Puede
-                        agregar un nuevo rol si lo desea, simplemente haciendo clic en el link de abajo para comenzar.
+                    En la etapa 2 se recopilan datos del anteproyecto que  propones realizar para tu residencia profesional,
+                     haz clic en el botón para llenar el formulario correspondiente o si ya lo llenaste para visualizar tus datos.
 
                     </p>
 
@@ -79,11 +105,13 @@ $this->title = 'My Yii Application';
                     </p>
             </div>
             <div class="col-sm ">
-            <h2>Etapa 3 (Carga de documentos)</h2>
+            <h2>Etapa 3: (Carga de Documentos).</h2>
 
                         <p>
 
-                        Este apartado le permiete cargar los documentos solicitados "Anexo IV y Anexo V"
+                        En esta etapa se suben los documentos solicitados por la 
+                        Lic. Julia Natalia Ku Borges que son el "Anexo I y Anexo IV" 
+                        haz clic para realizar tu carga de archivos.
 
 
                         </p>
@@ -111,11 +139,12 @@ $this->title = 'My Yii Application';
             </div>
             <div class="col-sm ">
                 
-            <h2>Etapa 4 resultados</h2>
+            <h2>Etapa 4: Resultados.</h2>
 
                 <p>
 
-                En este apartado podras visualizar tus resultados.
+                En esta última etapa se mostrará el listado de los residentes que completaron 
+                las etapas 1, 2 y 3, la misma proporcionará los resultados obtenidos de sus proyectos propuestos.
                 </p>
 
                 <p>
@@ -134,7 +163,7 @@ $this->title = 'My Yii Application';
             </div>
       </div>
       <div class="col-sm ">
-      <img class="img-thumbnail" src="imagenes/Infografía.png" alt="infografia" width="500" height="600">
+      <img class="img-thumbnail" src="imagenes/Infografía.jpeg" alt="infografia" width="500" height="600">
       </div>
     </div>  
 </div>

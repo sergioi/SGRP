@@ -14,12 +14,10 @@ $this->params['breadcrumbs'][] = ['label' => 'Maestros', 'url' => ['index']];
 
 \yii\web\YiiAsset::register($this);
 ?>
-<div class="maestros-view">
+<div class="jumbotron">
 
- <br>
- <br>
- <br>
- <br>
+<h1>Docente: <?= Html::encode($this->title) ?></h1>
+
 
     <?= DetailView::widget([
         'model' => $model,
@@ -43,7 +41,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Maestros', 'url' => ['index']];
         echo Html::a('Eliminar', ['delete', 'id' => $model->id], [
             'class' => 'btn btn-danger',
             'data' => [
-                'confirm' => Yii::t('app', 'Are you sure you want to delete this item?'),
+                'confirm' => Yii::t('app', '¿Estás seguro de que quieres eliminar este Registro?'),
                 'method' => 'post',
             ],
         ]);}?>

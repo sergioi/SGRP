@@ -5,7 +5,7 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 /** @var frontend\models\Etapa3 $model */
 
-$this->title = 'Ingeníera Industrial';
+$this->title = 'Ingeníera Industrial.';
 
 
 ?>

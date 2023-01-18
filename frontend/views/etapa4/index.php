@@ -10,15 +10,17 @@ use yii\grid\GridView;
 /** @var frontend\models\search\Etapa4Search $searchModel */
 /** @var yii\data\ActiveDataProvider $dataProvider */
 
-$this->title = 'Etapa4 (Entrega de Resultados).';
+$this->title = 'Etapa4: Entrega de Resultados.';
 
 ?>
 <div class="jumbotron">
    
     <h1><?= Html::encode($this->title) ?></h1>
 
-    
-    <p>Para Buscar tu Resultado Escribe tu Matricula en el Buscador.</p>
+    <div class="alert alert-success">
+    <strong></strong> Para Buscar tu Resultado Escribe tu Matrícula en el Buscador.
+  </div>
+ 
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 

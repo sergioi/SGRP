@@ -9,9 +9,9 @@ use yii\widgets\ActiveForm;
 ?>
 
 <div class="etapa1-form">
-COMPLETA LOS CAMPOS CON LA INFORMACION SOLICITADA, ASEGURATE DE LLENAR CORRECTAMENTE LOS CAMPOS ANTES DE SELECCIONAR “Guardar”
-<br>
-<br>  <?php $form = ActiveForm::begin(); ?>
+COMPLETA LOS CAMPOS CON LA INFORMACIÓN SOLICITADA, ASEGÚRATE DE LLENAR CORRECTAMENTE LOS CAMPOS ANTES DE SELECCIONAR “GUARDAR”.<br>
+<br> 
+ <?php $form = ActiveForm::begin(); ?>
 <div class="jumbotron">
     <div class="row">
 
@@ -45,6 +45,7 @@ COMPLETA LOS CAMPOS CON LA INFORMACION SOLICITADA, ASEGURATE DE LLENAR CORRECTAM
                 <?= $form->field($model, 'hablaLaLengua')->dropDownList($model->desicionLista, ['prompt' => 'Por favor Seleccione Uno' ]);?>
 
                 <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
+                <?= Html::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-primary' : 'btn btn-primary']) ?>
       </div>
     </div>  
   </div>
@@ -57,9 +58,7 @@ COMPLETA LOS CAMPOS CON LA INFORMACION SOLICITADA, ASEGURATE DE LLENAR CORRECTAM
 <br>
     
 
-    <div class="form-group">
-        <?= Html::submitButton($model->isNewRecord ? 'Guardar' : 'Actualizar', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
-    </div>
+    
     <?php ActiveForm::end(); ?>
 
 </div>

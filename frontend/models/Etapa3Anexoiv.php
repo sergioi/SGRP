@@ -69,7 +69,8 @@ class Etapa3Anexoiv extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'user_id' => 'User ID',
-            'archivo' => 'Anexo IV',
+            'anexo1' => 'Anexo IV',
+            'archivo' => '',
             'created_at' => 'Creado:',
             'update_at' => 'Actualizado:',
 

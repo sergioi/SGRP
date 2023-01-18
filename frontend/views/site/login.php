@@ -7,7 +7,7 @@
 use yii\bootstrap4\Html;
 use yii\bootstrap4\ActiveForm;
 
-$this->title = 'Inicair Sesión';
+$this->title = 'Iniciar Sesión';
 
 ?>
 <section class=" text-center text-lg-start">
