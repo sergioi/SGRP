@@ -34,7 +34,7 @@ $this->title = 'Sistema de Gestión para Residencias Profesionales';
 </h4>
         <div></div>
   
-      <a href="https://www.youtube.com/watch?v=p9SSIMSYAio" class="btn btn-outline-info" role="button " target="_blank">Sistema de Convenios</a>
+      <a href="http://scc.valladolid.tecnm.mx/" class="btn btn-outline-info" role="button " target="_blank">Sistema de Convenios</a>
 </div>
       </div>
       
