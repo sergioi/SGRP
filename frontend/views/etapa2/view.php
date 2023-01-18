@@ -23,7 +23,7 @@ $this->title =$model->NombreProyecto;
 
             //esto no es necesario pero está aquí como ejemplo
 
-            if (PermisosHelpers::userDebeSerPropietario('Etapa_2', $model->id)) {
+            if (PermisosHelpers::userDebeSerPropietario('etapa_2', $model->id)) {
 
                 echo Html::a('Actualizar', ['update', 'id' => $model->id],
                     ['class' => 'btn btn-primary']);

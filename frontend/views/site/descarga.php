@@ -71,7 +71,7 @@
                                       <td><?php echo $archivos[$i]; ?></td>
                                       <td>
                                           <a title="Descargar Archivo"
-                                            href="Anexo_I/<?php echo $archivos[$i]; ?>" 
+                                            href="Anexo_I/Industrial/<?php echo $archivos[$i]; ?>" 
                                             download="<?php echo $archivos[$i]; ?>"
                                             style="color: black; font-size:18px;">
                                             <i class='fas fa-cloud-download-alt'></i>
@@ -143,7 +143,7 @@
                                       <td><?php echo $archivos[$i]; ?></td>
                                       <td>
                                           <a title="Descargar Archivo"
-                                            href="Anexo_V/<?php echo $archivos[$i]; ?>" 
+                                            href="Anexo_V/Industrial/<?php echo $archivos[$i]; ?>" 
                                             download="<?php echo $archivos[$i]; ?>"
                                             style="color: black; font-size:18px;">
                                             <i class='fas fa-cloud-download-alt'></i>

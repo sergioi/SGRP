@@ -25,7 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
                 //esto no es necesario pero está aquí como ejemplo
 
-                if (PermisosHelpers::userDebeSerPropietario('Etapa_1', $model->id)) {
+                if (PermisosHelpers::userDebeSerPropietario('etapa_1', $model->id)) {
 
                     echo Html::a('Actualizar', ['update', 'id' => $model->id],
                         ['class' => 'btn btn-primary']);
